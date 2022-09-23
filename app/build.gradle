@@ -20,6 +20,11 @@ android {
     }
 
     buildTypes {
+        kapt {
+            arguments {
+                arg("room.schemaLocation", "some/path/goes/here/")
+            }
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
