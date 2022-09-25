@@ -131,10 +131,10 @@ class CrimeFragment : Fragment(), DatePickerFragment.Callbacks, TimePickerFragme
 
     private fun updateUI() {
         titleField.setText(crime.title)
-        val simpleDateFormat = SimpleDateFormat("yyyy/MM/dd HH:mm:ss",Locale.getDefault())
-        val crimeDate = SimpleDateFormat("yyyy/MM/dd", Locale.getDefault()).format(simpleDateFormat.parse("2022/02/01 14:23:05")!!)
+        val simpleDateFormat = SimpleDateFormat("MM/dd/yyyy HH:mm",Locale.getDefault())
+        val crimeDate = SimpleDateFormat("MM/dd/yyyy", Locale.getDefault()).format(simpleDateFormat.parse("09/22/2022 14:23:05")!!)
             .format(this.crime.date)
-        dateButton.text = crime.date.toString()
+        dateButton.text = crimeDate
         val crimeTime = SimpleDateFormat("hh:mm a")
             .format(this.crime.date).toString()
         timeButton.text = crimeTime
